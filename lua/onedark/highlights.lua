@@ -135,7 +135,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
     hl.treesitter = {
         -- nvim-treesitter@0.9.2 and after
         ["@annotation"] = colors.Fg,
-        ["@attribute"] = colors.Cyan,
+        ["@attribute"] = colors.Red,
         ["@attribute.typescript"] = colors.Blue,
         ["@boolean"] = colors.Orange,
         ["@character"] = colors.Orange,
@@ -154,7 +154,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@function.builtin"] = {fg = c.cyan, fmt = cfg.code_style.functions},
         ["@function.macro"] = {fg = c.cyan, fmt = cfg.code_style.functions},
         ["@function.method"] = {fg = c.blue, fmt = cfg.code_style.functions},
-        ["@keyword"] = {fg = c.purple, fmt = cfg.code_style.keywords},
+        ["@keyword"] = {fg = c.purple, fmt = 'italic'},
         ["@keyword.conditional"] = {fg = c.purple, fmt = cfg.code_style.keywords},
         ["@keyword.directive"] = colors.Purple,
         ["@keyword.exception"] = colors.Purple,
@@ -196,7 +196,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@warning"] = colors.Fg,
         ["@danger"] = colors.Fg,
         ["@type"] = colors.Yellow,
-        ["@type.builtin"] = colors.Orange,
+        ["@type.builtin"] = colors.Cyan,
         ["@variable"] = {fg = c.fg, fmt = cfg.code_style.variables},
         ["@variable.builtin"] = {fg = c.red, fmt = cfg.code_style.variables},
         ["@variable.member"] = colors.Cyan,
