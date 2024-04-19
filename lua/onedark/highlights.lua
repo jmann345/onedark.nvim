@@ -144,7 +144,7 @@ if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
         ["@comment.todo.unchecked"] = {fg = c.red, fmt = cfg.code_style.comments},
         ["@comment.todo.checked"] = {fg = c.green, fmt = cfg.code_style.comments},
         ["@constant"] = {fg = c.orange, fmt = cfg.code_style.constants},
-        ["@constant.builtin"] = {fg = c.red, fmt = cfg.code_style.constants},
+        ["@constant.builtin"] = {fg = c.orange, fmt = cfg.code_style.constants},
         ["@constant.macro"] = {fg = c.orange, fmt = cfg.code_style.constants},
         ["@constructor"] = {fg = c.cyan},
         ["@diff.add"] = colors.Green,
