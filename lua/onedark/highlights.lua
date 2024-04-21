@@ -38,46 +38,46 @@ local theme = {
   base06 = "#b6bdca",
   base07 = "#c8ccd4",
   base08 = "#e06c75",
-  base09 = "#d19a66",
-  base0A = "#e5c07b",
+  base09 = "#ef596f", -- Darker version is more vibrant, switch to this
+  base0A = "#e8c88c", -- Darker version is more vibrant, switch to this
   base0B = "#98c379",
   base0C = "#56b6c2",
   base0D = "#61afef",
-  base0E = "#c678dd",
-  base0F = "#be5046",
+  base0E = "#4fa6ed", -- Darker version is more vibrant, switch to this
+  base0F = "#8b3434" -- Darker version is more vibrant, switch to this
 }
 
 local base30 = {
   white = "#abb2bf",
-  darker_black = "#1b1f27",
-  black = "#1e222a", --  nvim bg
-  black2 = "#252931",
-  one_bg = "#282c34", -- real bg of onedark
-  one_bg2 = "#353b45",
-  one_bg3 = "#373b43",
-  grey = "#42464e",
-  grey_fg = "#565c64",
-  grey_fg2 = "#6f737b",
-  light_grey = "#6f737b",
-  red = "#e06c75",
-  baby_pink = "#DE8C92",
-  pink = "#ff75a0",
-  line = "#31353d", -- for lines like vertsplit
-  green = "#98c379",
-  vibrant_green = "#7eca9c",
-  nord_blue = "#81A1C1",
-  blue = "#61afef",
-  yellow = "#e7c787",
-  sun = "#EBCB8B",
-  purple = "#de98fd",
-  dark_purple = "#c882e7",
-  teal = "#519ABA",
-  orange = "#fca2aa",
-  cyan = "#a3b8ef",
-  statusline_bg = "#22262e",
-  lightbg = "#2d3139",
-  pmenu_bg = "#61afef",
-  folder_bg = "#61afef",
+  darker_black = "#0e1013", -- Darker version is more vibrant, switch to this
+  black = "#1f2329", -- Darker version is more vibrant, switch to this
+  black2 = "#282c34", -- Darker version is more vibrant, switch to this
+  one_bg = "#282c34", -- Darker version is more vibrant, switch to this
+  one_bg2 = "#353b45", -- Darker version is more vibrant, switch to this
+  one_bg3 = "#373b43", -- Darker version is more vibrant, switch to this
+  grey = "#30363f", -- Darker version is more vibrant, switch to this
+  grey_fg = "#323641", -- Darker version is more vibrant, switch to this
+  grey_fg2 = "#6f737b", -- No change, same in both palettes
+  light_grey = "#6f737b", -- No change, same in both palettes
+  red = "#ef596f", -- Darker version is more vibrant, switch to this
+  baby_pink = "#DE8C92", -- No change, not in the darker palette
+  pink = "#ff75a0", -- No change, not in the darker palette
+  line = "#31353d", -- No change, not in the darker palette
+  green = "#89ca78", -- Darker version is a bit more muted, don't switch
+  vibrant_green = "#7eca9c", -- No change, not in the darker palette
+  nord_blue = "#81A1C1", -- No change, not in the darker palette
+  blue = "#4fa6ed", -- Darker version is more vibrant, switch to this
+  yellow = "#e8c88c", -- Darker version is more vibrant, switch to this
+  sun = "#EBCB8B", -- No change, not in the darker palette
+  purple = "#d55fde", -- Darker version is more vibrant, switch to this
+  dark_purple = "#c882e7", -- No change, not in the darker palette
+  teal = "#519ABA", -- No change, not in the darker palette
+  orange = "#fca2aa", -- No change, not in the darker palette
+  cyan = "#2bbac5", -- Darker version is a bit more muted, don't switch
+  statusline_bg = "#22262e", -- No change, not in the darker palette
+  lightbg = "#2d3139", -- No change, not in the darker palette
+  pmenu_bg = "#61afef", -- No change, same in both palettes
+  folder_bg = "#61afef" -- No change, same in both palettes
 }
 
 hl.common = {
@@ -146,42 +146,6 @@ hl.common = {
     ToolbarButton = {fg = c.bg0, bg = c.bg_blue},
     FloatBorder = {fg = c.grey, bg = c.bg1},
     NormalFloat = {fg = c.fg, bg = c.bg1},
-}
-
-hl.syntax = {
-    String = {fg = c.green, fmt = cfg.code_style.strings},
-    Character = colors.Orange,
-    Number = colors.Orange,
-    Float = colors.Orange,
-    Boolean = colors.Orange,
-    Type = colors.Yellow,
-    Structure = colors.Yellow,
-    StorageClass = colors.Yellow,
-    Identifier = {fg = c.fg, fmt = cfg.code_style.variables},
-    Constant = colors.Cyan,
-    PreProc = colors.Purple,
-    PreCondit = colors.Purple,
-    Include = colors.Purple,
-    Keyword = {fg = c.purple, fmt = 'italic'},
-    Define = colors.Purple,
-    Typedef = colors.Yellow,
-    Exception = colors.Purple,
-    Conditional = {fg = c.purple, fmt = cfg.code_style.keywords},
-    Repeat = {fg = c.purple, fmt = cfg.code_style.keywords},
-    Statement = colors.Purple,
-    Macro = colors.Red,
-    Error = colors.Purple,
-    Label = colors.Purple,
-    Special = colors.Yellow,
-    SpecialChar = colors.Red,
-    Function = {fg = c.blue, fmt = cfg.code_style.functions},
-    Operator = colors.Fg,
-    Title = colors.Cyan,
-    Tag = colors.Green,
-    Delimiter = colors.Cyan,
-    Comment = {fg = c.grey, fmt = cfg.code_style.comments},
-    SpecialComment = {fg = c.grey, fmt = cfg.code_style.comments},
-    Todo = {fg = c.red, fmt = cfg.code_style.comments}
 }
 
 if vim.api.nvim_call_function("has", { "nvim-0.8" }) == 1 then
@@ -839,7 +803,6 @@ function M.setup()
     end
 
     vim_highlights(hl.common)
-    vim_highlights(hl.syntax)
     vim_highlights(hl.treesitter)
     if hl.lsp then
         vim_highlights(hl.lsp)
